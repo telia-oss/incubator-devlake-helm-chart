@@ -137,6 +137,7 @@ Some useful parameters for the chart, you could also check them in values.yaml
 | mysql.extraLabels                         | extra labels for mysql's statefulset                 | {}                       |
 | mysql.securityContext                     | pod security context values                          | {}                       |
 | mysql.containerSecurityContext            | container security context values                    | {}                       |
+| grafana.secretEnv                         | Kubernetes secret to use for environment variables   | apache/devlake-dashboard |
 | grafana.image.repository                  | repository for grafana's image                       | apache/devlake-dashboard |
 | grafana.image.pullPolicy                  | pullPolicy for grafana's image                       | Always                   |
 | grafana.useExternal                       | If use external grafana server                       | false                    |

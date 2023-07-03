@@ -71,6 +71,10 @@ spec:
           envFrom:
             - configMapRef:
                 name: {{ include "devlake.fullname" . }}-config
+            {{- if .Values.grafana.secretEnv }}
+            - secretRef:
+                name: {{ .Values.grafana.secretEnv }}
+            {{- end }}
             {{- if .Values.grafana.oauthEnabled }}
             - configMapRef:
                 name: {{ include "devlake.fullname" . }}-grafana-oauth-config

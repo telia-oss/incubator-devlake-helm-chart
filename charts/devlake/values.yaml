@@ -122,6 +122,9 @@ mysql:
 #   containerSecurityContext: {}
 
 grafana:
+  # Secret to use to configure environment variables
+  secretEnv: ""
+
   # image for grafana
   image:
     repository: apache/devlake-dashboard
